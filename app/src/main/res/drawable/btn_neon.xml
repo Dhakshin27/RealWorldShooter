@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Outer glow using semi-transparent stroke layer -->
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/transparent"/>
+            <corners android:radius="16dp"/>
+            <stroke
+                android:width="2dp"
+                android:color="#66A0D8FF" /> <!-- subtle neon stroke -->
+        </shape>
+    </item>
+
+    <!-- Main button body with gradient -->
+    <item android:top="2dp" android:bottom="2dp" android:left="2dp" android:right="2dp">
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="#16284D"
+                android:endColor="#0B1B3A"
+                android:angle="270"/>
+            <corners android:radius="14dp"/>
+            <padding android:left="12dp" android:top="12dp" android:right="12dp" android:bottom="12dp"/>
+        </shape>
+    </item>
+
+</layer-list>

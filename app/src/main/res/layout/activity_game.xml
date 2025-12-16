@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/gameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GameActivity">
+
+
+
+
+    <androidx.camera.view.PreviewView
+        android:id="@+id/viewFinder"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ImageView
+        android:id="@+id/crosshair"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/crosshair"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+    <TextView
+        android:id="@+id/myHealthText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Health: 100"
+        android:textColor="#FF0000"
+        android:textSize="18sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/opponentHealthText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Opponent Health: 100"
+        android:textColor="#0000FF"
+        android:textSize="18sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"/>
+
+<!--    <TextView-->
+<!--        android:id="@+id/debugText"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Debug..."-->
+<!--        android:textColor="#00FF00"-->
+<!--        android:textSize="16sp"-->
+<!--        android:padding="8dp"-->
+<!--        android:background="#66000000"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/myHealthText"/>-->
+    <com.example.realworldshooter.SemiCircleLayout
+        android:id="@+id/weaponWheel"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:alpha="0"
+        android:padding="0dp"
+        app:layout_constraintBottom_toTopOf="@id/shootButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+
+
+    <ImageView
+            android:id="@+id/weaponPistol"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/gun"/>
+
+        <ImageView
+            android:id="@+id/weaponShotgun"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/shotgun"/>
+
+        <ImageView
+            android:id="@+id/weaponSniper"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/smg2"/>
+
+        <ImageView
+            android:id="@+id/weaponSmg"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/submachine"/>
+
+        <ImageView
+            android:id="@+id/weaponAr"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/rifle"/>
+
+    </com.example.realworldshooter.SemiCircleLayout>
+
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/healthContainer"-->
+<!--        android:layout_width="100dp"-->
+<!--        android:layout_height="60dp"-->
+<!--        android:clipChildren="false"-->
+<!--        android:clipToPadding="false"-->
+<!--        app:layout_constraintBottom_toBottomOf="@+id/shootButton"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/shootButton"-->
+<!--        android:layout_marginEnd="20dp">-->
+
+<!--        &lt;!&ndash; RED HEALTH BAR &ndash;&gt;-->
+<!--        <ProgressBar-->
+<!--            android:id="@+id/healthBar"-->
+<!--            style="?android:attr/progressBarStyleHorizontal"-->
+<!--            android:layout_width="70dp"-->
+<!--            android:layout_height="10dp"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:max="100"-->
+<!--            android:progress="100"-->
+<!--            android:progressDrawable="@drawable/health_bar"/>-->
+
+<!--        &lt;!&ndash; HEART ICON OVERLAY &ndash;&gt;-->
+<!--        <ImageView-->
+<!--            android:id="@+id/healthHeart"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="47dp"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:layout_marginStart="5dp"-->
+<!--            android:src="@drawable/ic_heart_full" />-->
+<!--    </RelativeLayout>-->
+
+    <ImageButton
+        android:id="@+id/shootButton"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/ic_shoot"
+        android:background="@android:color/transparent"
+        android:contentDescription="Shoot"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="30dp"/>
+    <ImageButton
+        android:id="@+id/reloadButton"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/reload"
+        android:background="@android:color/transparent"
+        android:contentDescription="Reload"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@id/shootButton"
+        app:layout_constraintStart_toEndOf="@id/shootButton"
+        android:layout_marginStart="30dp"/>
+    <TextView
+        android:id="@+id/ammoText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ammo: 12/12"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/reloadButton"
+        app:layout_constraintStart_toEndOf="@id/reloadButton"
+        android:layout_marginStart="-85dp"
+        android:layout_marginTop="0dp" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

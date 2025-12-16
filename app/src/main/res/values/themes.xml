@@ -1,0 +1,5 @@
+<resources>
+    <style name="Theme.Realworldshooter" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Optional: customize colors -->
+    </style>
+</resources>

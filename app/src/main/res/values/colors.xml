@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg_dark">#0B0D17</color>       <!-- Dark navy/space background -->
+    <color name="text_primary">#FFFFFF</color>  <!-- white text -->
+    <color name="neon_blue">#00FFFF</color>
+    <color name="neon_pink">#FF00FF</color>
+    <color name="btn_primary_bg">#0D6EFF</color>
+    <color name="btn_secondary_bg">#FF1A8C</color>
+    <color name="btn_glow_blue">#5512F8FF</color>
+    <color name="btn_glow_pink">#55FF00FF</color><!-- Background -->
+    <!-- Dark navy/space background -->
+        <color name="bg_gradient_start">#0B0D17</color>
+        <color name="bg_gradient_end">#1A1F36</color>
+
+        <!-- Text -->
+
+        <color name="text_shadow">#00FFFF</color>
+
+        <!-- Neon Buttons -->
+
+        <!-- Particles / Effects -->
+        <color name="particle_blue">#0DF0FF</color>
+        <color name="particle_pink">#FF2AE8</color>
+
+</resources>
+
